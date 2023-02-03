@@ -116,25 +116,3 @@ saveButton.addEventListener('click', function () {
 randomButton.addEventListener('click', function () {
     displayRandomTip();
 });
-/*
-saveButton.addEventListener('click', function() {
-    const likedQuote = document.createElement("p");
-    likedQuote.innerHTML = `${data[0].q} - ${data[0].a}`;
-    likedQHolder.append(likedQuote);
-    saveButton.style.display = "none"; */
-/* let arr = [];
-let quoteObj = {
-    quotes: [
-        {
-            quote: data[0].q,
-            author: data[0].a,
-        },
-        
-    ]
-}
-saveButton.style.display = "none";
-const arrLength = quoteObj.quotes.length;
-for(let i = 0; i < arrLength; i++) {
-    arr.push(quoteObj.quotes[0]);
-    console.log(arr);
-} */

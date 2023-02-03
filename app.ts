@@ -59,11 +59,10 @@ function displayRandomTip() {
 };
 
 saveButton.addEventListener('click', function() {
-    const likedQuote = document.createElement('p') as any;
+    const likedQuote = document.createElement('p') as HTMLParagraphElement;
     likedQuote.innerHTML = randomDiv.innerHTML;
     savedDiv.append(likedQuote);
     saveButton.style.display = "none";
-    console.log(randomDiv);
 });
 
 
