@@ -7,7 +7,8 @@ const dailyDiv = document.querySelector('.dailyTip') as HTMLElement;
 const randomDiv = document.querySelector('.randomTip') as HTMLElement;
 const buttonDiv = document.querySelector('.buttons') as HTMLElement;
 const savedQuotes = document.querySelector('.savedQuotes') as HTMLElement;
-const likedQHolder = document.querySelector('#likedDiv') as HTMLDivElement;
+const savedDiv = document.querySelector('#savedDiv') as HTMLDivElement;
+
 
 
 //--------------load daily tip with onload event--------------
@@ -20,7 +21,12 @@ async function getDailyTip() {
 
 function displayDailyTip() {
     getDailyTip().then((data) => {
+        const authorImage = document.createElement('img') as HTMLImageElement;
+        authorImage.src = data[0].i;
+        authorImage.style.height = "60px"
+        authorImage.style.width = "60px"
         dailyDiv.innerHTML = `${data[0].q} - ${data[0].a}`;
+        dailyDiv.append(authorImage);
     });
 };
 
@@ -38,53 +44,30 @@ async function getRandomTip() {
     return dataRandom;
 };
 
+
+
 function displayRandomTip() {
     getRandomTip().then((data) => {
-        randomDiv.innerHTML = "";
+        const authorImage = document.createElement('img') as HTMLImageElement;
+        authorImage.src = data[0].i;
+        authorImage.style.height = "60px"
+        authorImage.style.width = "60px"
         randomDiv.innerHTML =  `${data[0].q} - ${data[0].a}`;
-        saveButton.style.display = "inline"; 
-        saveButton.addEventListener('click', function() {
-            const likedQuote = document.createElement("p");
-            likedQuote.innerHTML = `${data.q} - ${data.a}`;
-            console.log(likedQuote);
-            likedQHolder.append(likedQuote);
-        });
+        saveButton.style.display = "inline";
+        randomDiv.append(authorImage);
     });
 };
+
+saveButton.addEventListener('click', function() {
+    const likedQuote = document.createElement('p') as any;
+    likedQuote.innerHTML = randomDiv.innerHTML;
+    savedDiv.append(likedQuote);
+    saveButton.style.display = "none";
+    console.log(randomDiv);
+});
 
 
 randomButton.addEventListener('click', function() {
     displayRandomTip();
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-/* let arr = [];
-let quoteObj = {
-    quotes: [
-        {
-            quote: data[0].q, 
-            author: data[0].a, 
-        },
-        
-    ]
-}
-saveButton.style.display = "none";
-const arrLength = quoteObj.quotes.length;
-for(let i = 0; i < arrLength; i++) {
-    arr.push(quoteObj.quotes[0]);
-    console.log(arr);
-} */

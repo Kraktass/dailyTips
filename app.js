@@ -42,7 +42,7 @@ var dailyDiv = document.querySelector('.dailyTip');
 var randomDiv = document.querySelector('.randomTip');
 var buttonDiv = document.querySelector('.buttons');
 var savedQuotes = document.querySelector('.savedQuotes');
-var likedQHolder = document.querySelector('#likedDiv');
+var savedDiv = document.querySelector('#savedDiv');
 //--------------load daily tip with onload event--------------
 function getDailyTip() {
     return __awaiter(this, void 0, void 0, function () {
@@ -63,7 +63,12 @@ function getDailyTip() {
 ;
 function displayDailyTip() {
     getDailyTip().then(function (data) {
+        var authorImage = document.createElement('img');
+        authorImage.src = data[0].i;
+        authorImage.style.height = "60px";
+        authorImage.style.width = "60px";
         dailyDiv.innerHTML = "".concat(data[0].q, " - ").concat(data[0].a);
+        dailyDiv.append(authorImage);
     });
 }
 ;
@@ -91,21 +96,32 @@ function getRandomTip() {
 ;
 function displayRandomTip() {
     getRandomTip().then(function (data) {
-        randomDiv.innerHTML = "";
-        randomDiv.innerHTML = "".concat(data.q, " - ").concat(data.a);
+        var authorImage = document.createElement('img');
+        authorImage.src = data[0].i;
+        authorImage.style.height = "60px";
+        authorImage.style.width = "60px";
+        randomDiv.innerHTML = "".concat(data[0].q, " - ").concat(data[0].a);
         saveButton.style.display = "inline";
-        saveButton.addEventListener('click', function () {
-            var likedQuote = document.createElement("p");
-            likedQuote.innerHTML = "".concat(data.q, " - ").concat(data.a);
-            console.log(likedQuote);
-            likedQHolder.append(likedQuote);
-        });
+        randomDiv.append(authorImage);
     });
 }
 ;
+saveButton.addEventListener('click', function () {
+    var likedQuote = document.createElement('p');
+    likedQuote.innerHTML = randomDiv.innerHTML;
+    savedDiv.append(likedQuote);
+    saveButton.style.display = "none";
+    console.log(randomDiv);
+});
 randomButton.addEventListener('click', function () {
     displayRandomTip();
 });
+/*
+saveButton.addEventListener('click', function() {
+    const likedQuote = document.createElement("p");
+    likedQuote.innerHTML = `${data[0].q} - ${data[0].a}`;
+    likedQHolder.append(likedQuote);
+    saveButton.style.display = "none"; */
 /* let arr = [];
 let quoteObj = {
     quotes: [
