@@ -1,2 +1,40 @@
 
 
+
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin border() {
+    width: 90vw;
+    border-top: 1px groove $white;
+}
+
+@mixin cardLayout () {
+    @include flexCenter();
+        @include border();
+        flex-direction: column;
+        padding: 2rem;
+}
+
+@mixin buttonStyle {
+    color: $white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    border-color: $btnColor;
+    background-color: $btnColor;
+    border: solid, 10px;
+    margin-top: 5vh;
+    margin-top: 20px
+}
+
+@mixin imgStyle() {
+    img {
+        margin: 10px 10px 20px 10px;
+    }
+}

@@ -1,9 +1,20 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:ital,wght@1,300&display=swap');
 
-// palette
+//font
+$headerFont: 'Lora', sans-serif;
+$bodyFont: 'Montserrat', sans-serif;
 
+
+
+//Palette
 $oliveGreen: #CCD5AE;
 $lightGreen: #E9EDC9;
 $beige: #FEFAE0;
 $lightBrown: #FAEDCD;
 $brown: #D4A373;
+$white: #f9faf8;
+$darkBlue: #1f2937;
+$btnColor: #3882f6;
+

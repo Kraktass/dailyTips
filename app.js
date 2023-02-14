@@ -38,16 +38,16 @@ var urlRandom = 'https://zenquotes.io/api/random/116b01ed99f7230a36d036a31adcc0f
 var urlDaily = 'https://zenquotes.io/api/today/116b01ed99f7230a36d036a31adcc0f796ed6a70';
 var authorUrl = 'https://zenquotes.io/api/authors/116b01ed99f7230a36d036a31adcc0f796ed6a70';
 var userKey = '116b01ed99f7230a36d036a31adcc0f796ed6a70';
-var randomButton = document.querySelector('.randomize');
+var randomButton = document.querySelector('.randomizeButton');
 var saveButton = document.querySelector('.saveButton');
 var saveDaily = document.querySelector('.saveDaily');
 var dailyDiv = document.querySelector('.dailyTip');
 var randomDiv = document.querySelector('.randomTip');
 var buttonDiv = document.querySelector('.buttons');
 var savedQuotes = document.querySelector('.savedQuotes');
-var savedDiv = document.querySelector('#savedDiv');
+var savedDiv = document.querySelector('.savedDiv');
 var authorList = document.querySelector('.authorList');
-var body = document.querySelector('#documentFrame');
+var body = document.querySelector('.documentFrame');
 var quotes = document.querySelector('.quotes');
 var authorCard = document.querySelector('.authorCard');
 //--------------load daily tip with onload event--------------
@@ -90,7 +90,9 @@ function displayDailyTip() {
 ;
 window.addEventListener("load", function () {
     displayDailyTip();
+    displayRandomTip();
     saveButton.style.display = "none";
+    //  saveDaily.style.display = "inline";
 });
 //--------------load random tip--------------
 function getRandomTip() {

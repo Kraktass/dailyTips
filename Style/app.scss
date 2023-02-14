@@ -1,6 +1,82 @@
 
 @import '_variables.scss';
+@import '_mixins.scss';
+
+
+body {
+    margin: 0;
+}
+
+img {
+    border-radius: 50%;
+}
+
 
 h1 {
-    background: $oliveGreen;
+    font-family: $headerFont;
+    color: $white;
+    display: flex;
+    background: $darkBlue;
+    margin: 0;
+    padding: 15px;
 }
+
+.documentFrame {
+    color: $white;
+    font-size: larger;
+    font-family: $bodyFont;
+    background-color: $darkBlue;
+    @include flexCenter();
+    flex-direction: column;
+}
+
+.firstCard {
+    @include cardLayout();
+    .dailyTip {
+        @include flexCenter();
+        @include imgStyle();
+        flex-direction: column-reverse;
+
+    }    
+}
+
+.randomTip {
+    @include flexCenter();
+    @include imgStyle();
+    flex-direction: column-reverse
+}
+
+.savedDiv {
+    img {
+        margin-left: 10px
+    }
+}
+
+.randomizeButton {
+    @include buttonStyle();
+}
+
+.saveButton {
+    @include buttonStyle();
+}
+
+.saveDaily {
+    @include buttonStyle();
+}
+
+.random {
+    @include cardLayout();
+    min-width: 30vw;
+}
+
+.savedQuotes {
+    @include cardLayout();
+    min-width: 30vw;
+}
+
+
+
+
+
+
+

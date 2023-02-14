@@ -1,3 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:ital,wght@1,300&display=swap");
+body {
+  margin: 0;
+}
+
+img {
+  border-radius: 50%;
+}
+
 h1 {
-  background: #CCD5AE;
+  font-family: "Lora", sans-serif;
+  color: #f9faf8;
+  display: flex;
+  background: #1f2937;
+  margin: 0;
+  padding: 15px;
+}
+
+.documentFrame {
+  color: #f9faf8;
+  font-size: larger;
+  font-family: "Montserrat", sans-serif;
+  background-color: #1f2937;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.firstCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  border-top: 1px groove #f9faf8;
+  flex-direction: column;
+  padding: 2rem;
+}
+.firstCard .dailyTip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.firstCard .dailyTip img {
+  margin: 10px 10px 20px 10px;
+}
+
+.randomTip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.randomTip img {
+  margin: 10px 10px 20px 10px;
+}
+
+.savedDiv img {
+  margin-left: 10px;
+}
+
+.randomizeButton {
+  color: #f9faf8;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border-color: #3882f6;
+  background-color: #3882f6;
+  border: solid, 10px;
+  margin-top: 5vh;
+  margin-top: 20px;
+}
+
+.saveButton {
+  color: #f9faf8;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border-color: #3882f6;
+  background-color: #3882f6;
+  border: solid, 10px;
+  margin-top: 5vh;
+  margin-top: 20px;
+}
+
+.saveDaily {
+  color: #f9faf8;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border-color: #3882f6;
+  background-color: #3882f6;
+  border: solid, 10px;
+  margin-top: 5vh;
+  margin-top: 20px;
+}
+
+.random {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  border-top: 1px groove #f9faf8;
+  flex-direction: column;
+  padding: 2rem;
+  min-width: 30vw;
+}
+
+.savedQuotes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  border-top: 1px groove #f9faf8;
+  flex-direction: column;
+  padding: 2rem;
+  min-width: 30vw;
 }/*# sourceMappingURL=app.css.map */

@@ -3,16 +3,16 @@ const urlRandom = 'https://zenquotes.io/api/random/116b01ed99f7230a36d036a31adcc
 const urlDaily = 'https://zenquotes.io/api/today/116b01ed99f7230a36d036a31adcc0f796ed6a70'
 const authorUrl = 'https://zenquotes.io/api/authors/116b01ed99f7230a36d036a31adcc0f796ed6a70'
 const userKey = '116b01ed99f7230a36d036a31adcc0f796ed6a70';
-const randomButton = document.querySelector('.randomize') as HTMLButtonElement;
+const randomButton = document.querySelector('.randomizeButton') as HTMLButtonElement;
 const saveButton = document.querySelector('.saveButton') as HTMLButtonElement;
 const saveDaily = document.querySelector('.saveDaily') as HTMLButtonElement;
 const dailyDiv = document.querySelector('.dailyTip') as HTMLElement;
 const randomDiv = document.querySelector('.randomTip') as HTMLElement;
 const buttonDiv = document.querySelector('.buttons') as HTMLElement;
 const savedQuotes = document.querySelector('.savedQuotes') as HTMLElement;
-const savedDiv = document.querySelector('#savedDiv') as HTMLDivElement;
+const savedDiv = document.querySelector('.savedDiv') as HTMLDivElement;
 const authorList = document.querySelector('.authorList') as HTMLElement;
-const body = document.querySelector('#documentFrame') as HTMLElement;
+const body = document.querySelector('.documentFrame') as HTMLElement;
 const quotes = document.querySelector('.quotes') as HTMLElement;
 const authorCard = document.querySelector('.authorCard') as HTMLElement;
 
@@ -52,7 +52,9 @@ function displayDailyTip() {
 
 window.addEventListener("load", () => {
     displayDailyTip();
+    displayRandomTip();
     saveButton.style.display = "none";
+  //  saveDaily.style.display = "inline";
 });
 
 
