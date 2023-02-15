@@ -13,7 +13,7 @@ const buttonDiv = document.querySelector('.buttons') as HTMLElement;
 const savedQuotes = document.querySelector('.savedQuotes') as HTMLElement;
 const savedDiv = document.querySelector('.savedDiv') as HTMLDivElement;
 const authorList = document.querySelector('.authorList') as HTMLElement;
-const body = document.querySelector('.documentFrame') as HTMLElement;
+const body = document.querySelector('body') as HTMLElement;
 const quotes = document.querySelector('.quotes') as HTMLElement;
 const authorCard = document.querySelector('.authorCard') as HTMLElement;
 
@@ -116,6 +116,7 @@ function displayAuthors () {
 
 
             authorImage.addEventListener('click', function () {
+                body.style.overflow = 'hidden';
                 authorCard.style.display = "flex"
                 quotes.innerHTML = "";
                 console.log(data[i]);
@@ -131,6 +132,7 @@ function displayAuthors () {
                 };
             exitButton.addEventListener('click', function () {
                 authorCard.style.display = "none";
+                body.style.overflow = 'auto';
             })    
 
             function displayOneAuthor () {

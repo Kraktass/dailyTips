@@ -2,7 +2,178 @@
 @import '_variables.scss';
 @import '_mixins.scss';
 
+body {
+    width: auto;
+    margin: 0;
+    position: relative;
+}
 
+img {
+    border-radius: 50%;
+}
+
+
+h1 {
+    font-family: $headerFont;
+    color: $white;
+    display: flex;
+    background: $darkBlue;
+    margin: 0;
+    padding: 15px;
+}
+
+.documentFrame {
+    z-index: 1;
+    color: $white;
+    font-size: larger;
+    font-family: $bodyFont;
+    background-color: $darkBlue;
+    @include flexCenter();
+    flex-direction: column;
+    position: relative;
+}
+
+.firstCard {
+    @include cardLayout();
+    .dailyTip {
+        @include flexCenter();
+        @include imgMargin();
+        flex-direction: column-reverse;
+
+    }    
+}
+
+.randomTip {
+    @include flexCenter();
+    @include imgMargin();
+    flex-direction: column-reverse
+}
+
+h2 {
+    @include flexCenter();
+    font-family: $headerFont;
+    font-size: xx-large;
+}
+
+.authorList {
+    z-index: 1;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "a"
+}
+
+.authors {
+    @include flexCenter();
+    flex-direction: column-reverse;
+    margin-bottom: 2rem;
+    font-family: $bodyFont;
+    font-size: large;
+    img {
+        @include imgShadow();
+    }
+}
+
+
+    
+.authors img:hover{
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    transition: 0.5s ease;
+}
+
+.quotes {
+    @include flexCenter();
+    display: grid;
+    overflow: auto;
+    font-family: $bodyFont;
+    flex-direction: column;
+    background-color: $white;
+    border-radius: 10px;
+    padding: 2em;
+    img {
+        @include imgShadow;
+        margin: 10px;
+    }
+    
+}
+
+.authorCard {
+    display: flex;
+    top: 0;
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 5;
+    width: 100vw;
+    height: 100%;
+    img {
+        /* display: none; */
+    }
+    
+}
+
+.savedDiv {
+    img {
+        margin-left: 10px
+    }
+    p {
+        display: flex;
+        margin-bottom: 2em;
+    }
+} 
+
+.card {
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    li {
+        padding-top: 10%;
+    }
+}
+
+.card button:hover {
+    -webkit-transform: scale(1.8);
+    -ms-transform: scale(1.8);
+    transform: scale(1.8);
+    transition: 0.5s ease;
+}
+
+.exitButton {
+    background-color: transparent;
+    border: 0;
+    font-size: xx-large;
+}
+
+.randomizeButton {
+    @include buttonStyle();
+}
+
+.saveButton {
+    @include buttonStyle();
+}
+
+.saveDaily {
+    @include buttonStyle();
+}
+
+.random {
+    @include cardLayout();
+    min-width: 30vw;
+}
+
+.savedQuotes {
+    @include cardLayout();
+    min-width: 30vw;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
 body {
     margin: 0;
     position: relative;
@@ -158,7 +329,8 @@ h2 {
     min-width: 30vw;
 }
 
-
+}
+    
 
 
 

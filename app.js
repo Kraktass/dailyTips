@@ -48,7 +48,7 @@ var buttonDiv = document.querySelector('.buttons');
 var savedQuotes = document.querySelector('.savedQuotes');
 var savedDiv = document.querySelector('.savedDiv');
 var authorList = document.querySelector('.authorList');
-var body = document.querySelector('.documentFrame');
+var body = document.querySelector('body');
 var quotes = document.querySelector('.quotes');
 var authorCard = document.querySelector('.authorCard');
 //--------------load daily tip with onload event--------------
@@ -164,6 +164,7 @@ function displayAuthors() {
             authorList.appendChild(authorInfo);
             authorInfo.appendChild(authorImage);
             authorImage.addEventListener('click', function () {
+                body.style.overflow = 'hidden';
                 authorCard.style.display = "flex";
                 quotes.innerHTML = "";
                 console.log(data[i]);
@@ -191,6 +192,7 @@ function displayAuthors() {
                 ;
                 exitButton.addEventListener('click', function () {
                     authorCard.style.display = "none";
+                    body.style.overflow = 'auto';
                 });
                 function displayOneAuthor() {
                     getLink().then(function (data) {

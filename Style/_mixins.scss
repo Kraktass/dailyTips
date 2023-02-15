@@ -19,6 +19,13 @@
         padding: 2rem;
 }
 
+@mixin cardLayoutReverse () {
+    @include flexCenter();
+        @include border();
+        flex-direction: column-reverse;
+        padding: 2rem;
+}
+
 @mixin buttonStyle {
     color: $white;
     padding-top: 10px;
