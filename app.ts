@@ -54,8 +54,8 @@ function displayDailyTip() {
 window.addEventListener("load", () => {
     displayDailyTip();
     displayRandomTip();
-    saveButton.style.display = "none";
-  //  saveDaily.style.display = "inline";
+   // saveButton.style.display = "none";
+
 });
 
 

@@ -2,6 +2,9 @@
 @import '_variables.scss';
 @import '_mixins.scss';
 
+
+@media screen and (max-width: 768px) {
+
 body {
     width: auto;
     margin: 0;
@@ -169,8 +172,9 @@ h2 {
     @include cardLayout();
     min-width: 30vw;
 }
+}
 
-
+// for desktops ---------------------------------------------------------------------------------------
 
 
 @media screen and (min-width: 768px) {
@@ -256,6 +260,7 @@ h2 {
 
 .quotes {
     @include flexCenter();
+    line-height: 3rem;
     font-family: $bodyFont;
     flex-direction: column;
     background-color: $white;
@@ -278,6 +283,7 @@ h2 {
     width: 100vw;
     height: 100vh;
     overflow: auto;
+    margin-bottom: 10%
     
 }
 
