@@ -308,8 +308,11 @@ h2 {
 }
 
 .exitButton {
+    border-color: $white;
+    color: $white;
+    margin-bottom: 0.1em;
+    border-radius: 30%;
     background-color: transparent;
-    border: 0;
     font-size: xx-large;
 }
 
