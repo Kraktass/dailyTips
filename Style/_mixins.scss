@@ -33,8 +33,13 @@
     margin-top: 20px
 }
 
-@mixin imgStyle() {
+@mixin imgMargin() {
     img {
         margin: 10px 10px 20px 10px;
     }
+}
+
+@mixin imgShadow() {
+    box-shadow: 1px 1px 5px 1px;
+    margin-bottom: 0.5rem;
 }

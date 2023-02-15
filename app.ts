@@ -6,6 +6,7 @@ const userKey = '116b01ed99f7230a36d036a31adcc0f796ed6a70';
 const randomButton = document.querySelector('.randomizeButton') as HTMLButtonElement;
 const saveButton = document.querySelector('.saveButton') as HTMLButtonElement;
 const saveDaily = document.querySelector('.saveDaily') as HTMLButtonElement;
+const exitButton = document.querySelector('.exitButton') as HTMLButtonElement;
 const dailyDiv = document.querySelector('.dailyTip') as HTMLElement;
 const randomDiv = document.querySelector('.randomTip') as HTMLElement;
 const buttonDiv = document.querySelector('.buttons') as HTMLElement;
@@ -115,6 +116,7 @@ function displayAuthors () {
 
 
             authorImage.addEventListener('click', function () {
+                authorCard.style.display = "flex"
                 quotes.innerHTML = "";
                 console.log(data[i]);
                 const cardImage = document.createElement('img') as HTMLImageElement;
@@ -127,7 +129,9 @@ function displayAuthors () {
                     const links = await response.json();
                     return links;
                 };
-
+            exitButton.addEventListener('click', function () {
+                authorCard.style.display = "none";
+            })    
 
             function displayOneAuthor () {
                 getLink().then((data) => {

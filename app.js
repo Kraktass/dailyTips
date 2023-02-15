@@ -41,6 +41,7 @@ var userKey = '116b01ed99f7230a36d036a31adcc0f796ed6a70';
 var randomButton = document.querySelector('.randomizeButton');
 var saveButton = document.querySelector('.saveButton');
 var saveDaily = document.querySelector('.saveDaily');
+var exitButton = document.querySelector('.exitButton');
 var dailyDiv = document.querySelector('.dailyTip');
 var randomDiv = document.querySelector('.randomTip');
 var buttonDiv = document.querySelector('.buttons');
@@ -163,6 +164,7 @@ function displayAuthors() {
             authorList.appendChild(authorInfo);
             authorInfo.appendChild(authorImage);
             authorImage.addEventListener('click', function () {
+                authorCard.style.display = "flex";
                 quotes.innerHTML = "";
                 console.log(data[i]);
                 var cardImage = document.createElement('img');
@@ -187,6 +189,9 @@ function displayAuthors() {
                     });
                 }
                 ;
+                exitButton.addEventListener('click', function () {
+                    authorCard.style.display = "none";
+                });
                 function displayOneAuthor() {
                     getLink().then(function (data) {
                         console.log(data);

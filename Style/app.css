@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:ital,wght@1,300&display=swap");
 body {
   margin: 0;
+  position: relative;
 }
 
 img {
@@ -18,6 +19,7 @@ h1 {
 }
 
 .documentFrame {
+  z-index: 1;
   color: #f9faf8;
   font-size: larger;
   font-family: "Montserrat", sans-serif;
@@ -26,6 +28,7 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .firstCard {
@@ -57,8 +60,91 @@ h1 {
   margin: 10px 10px 20px 10px;
 }
 
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lora", sans-serif;
+  font-size: xx-large;
+}
+
+.authorList {
+  z-index: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "a b c d";
+}
+
+.authors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  margin-bottom: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: large;
+}
+.authors img {
+  box-shadow: 1px 1px 5px 1px;
+  margin-bottom: 0.5rem;
+}
+
+.authors img:hover {
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.quotes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  flex-direction: column;
+  background-color: #f9faf8;
+  border-radius: 10px;
+  padding: 2em;
+}
+.quotes img {
+  box-shadow: 1px 1px 5px 1px;
+  margin-bottom: 0.5rem;
+  margin: 10px;
+}
+
+.authorCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
 .savedDiv img {
   margin-left: 10px;
+}
+
+.card {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.card button:hover {
+  transform: scale(1.8);
+  transition: 0.5s ease;
+}
+
+.exitButton {
+  background-color: transparent;
+  border: 0;
+  font-size: xx-large;
 }
 
 .randomizeButton {
