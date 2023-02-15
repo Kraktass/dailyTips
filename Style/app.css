@@ -18,6 +18,7 @@
     padding: 15px;
   }
   .documentFrame {
+    width: 100%;
     z-index: 1;
     color: #f9faf8;
     font-size: larger;
