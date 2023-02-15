@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:ital,wght@1,300&display=swap");
 @media screen and (max-width: 768px) {
   body {
-    width: auto;
+    width: 100%;
     margin: 0;
     position: relative;
   }
